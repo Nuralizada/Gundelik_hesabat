@@ -433,7 +433,7 @@ elif page == "Tranzit":
         # Ümumi cəmi olan bir sətir əlavə etmek lazimdir 
         total_row = pd.DataFrame({
             'Malın_adı': ['Ümumi cəm'],
-            'Göndərən ölkə': ['Ümumi'],
+            'Göndərən ölkə': [''],
             'GSA': [''],
             'Vaqon_sayı': [total_vaqon_sayi],
             'Həcm_fakt': [total_hecm_fakt]
@@ -469,13 +469,7 @@ elif page == "Tranzit":
         toplam_fakt = total_hecm_fakt
         toplam_yerine_yetirme_faizi = (toplam_fakt / toplam_plan * 100) if toplam_plan > 0 else 0
 
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            card("Toplam Vaqon Sayı", f"{toplam_plan:,.0f}")
-        with col2:
-            card("Toplam Həcm", f"{toplam_fakt:,.0f}")
-        with col3:
-            card("Toplam Yerinə Yetirmə Faizi", f"{toplam_yerine_yetirme_faizi:.0f}%")
+        
 
 elif page == "Digər yüklər":
     st.markdown(f"""
