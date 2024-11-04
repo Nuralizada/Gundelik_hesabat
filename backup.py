@@ -358,10 +358,8 @@ if page == "Current Month,Current Year":
             # Vaqon cədvəlini yaradın
             create_table(vaqon_df.sort_values(by='Plan', ascending=False), "Vaqon növü üzrə plan və fakt həcmləri")
 
-elif page == "Tranzit":
     
         
-
 elif page == "Digər yüklər":
     st.markdown(f"""
         <h3 style='text-align: left; color: #2b2563;'>
